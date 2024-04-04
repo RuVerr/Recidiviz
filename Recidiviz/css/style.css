@@ -1,0 +1,965 @@
+
+/* Общие стили для повторяющихся элементов */
+
+/* Установка пространства для контента */
+.body {
+    box-sizing: border-box;
+}
+
+/* Стили для заголовков */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Libre Baskerville';
+    font-weight: 400
+}
+
+/* Стили для абзацев */
+p {
+    font-family: 'Public Sans';
+    font-weight: 400;
+}
+
+/* Стили для кнопок */
+button {
+    transition: 0.3s ease-in;
+    cursor: pointer;
+    font-family: 'Public Sans';
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+}
+
+button:hover{
+    background-color: #00A1FF;
+}
+
+button:active{
+    background-color: #E00E00;
+}
+
+/* Стили для ссылок */
+a {
+    transition: 0.3s ease-in;
+    text-decoration: none;
+    font-family: 'Public Sans';
+    font-weight: 400;
+}
+
+a:hover{
+    color: #00A1FF;
+    border-top-color: #00A1FF;
+}
+
+a:active{
+    color: #E00E00;
+    border-top-color: #E00E00;
+}
+
+/* Стили для маркированных списков */
+ul {
+    list-style: none;
+}
+
+/* Стили для времени */
+.time {
+    padding-left: 22px;
+    color: #35536299;
+    font-family: 'Public Sans';
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+/* Стили для якоря */
+.anchor{
+    position: relative;
+    top: -70px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -5;
+}
+
+
+/* Стили для контейнера с максимальной шириной */
+.container {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* Стили для пользовательского контейнера с максимальной шириной */
+.custom_container {
+    max-width: 756px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* Стили для шапки страницы */
+.header{
+    background-color: #0000009b;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 10;
+}
+
+/* Стили для навигационного меню */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+/* Стили для списка элементов меню */
+.list_menu{
+    display: flex;
+    column-gap: 50px;
+    padding: 0;
+}
+
+/* Стили для элементов списка меню */
+.link_item{
+    font-size: 13px;
+    line-height: 16px;
+    color: #FFFFFF;
+}
+
+/* Стили для отключения бургер-меню */
+.input_burger,
+.burger_menu{
+    display: none; /* Скрытие элементов */
+}
+
+/* Popup */
+.popup{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #00000050;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s ease-in;
+}
+
+/* Псевдокласс для открытия popup */
+.popup:target{
+    opacity: 1;
+    visibility: visible;
+    transition: 0.3s ease-in;
+}
+
+/* Арена для закрытия из фона */
+.popup_area{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+
+}
+
+/* Тело */
+.popup_body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 200px;
+}
+
+/* Контент */
+.popup_content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFFFF;
+    width: 350px;
+    height: auto;
+    padding: 50px 50px;
+    border-radius: 20px;
+    box-shadow: 0px 1px 20px 0px;
+}
+
+/* Крестик для закрытия */
+.popup_close{
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+}
+
+/* Крестик для закрытия */
+.close_line,
+.close_line_2{
+    position: absolute;
+    top: 0%;
+    left: 45%;
+    width: 1px;
+    height: 24px;
+    background-color: #000000;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.close_line{
+    transform: rotate(45deg);
+}
+
+.close_line_2{
+    transform: rotate(315deg);
+}
+
+.form{
+    width: 100%;
+}
+
+.form_group{
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.form_group_last_child{
+    margin-bottom: 10px;
+}
+
+.form_input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #afafafb7;
+    outline: none;
+    font-family: 'Public Sans';
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.form_label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.3s ease-in;
+    font-family: 'Public Sans';
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.form_input:focus ~ .form_label,
+.form_input:not(:placeholder-shown) ~ .form_label{
+    top: -18px;
+    font-size: 12px;
+}
+
+.form_button{
+    margin: 10px 0 10px 0;
+    padding: 5px 30px;
+    border-radius: 15px;
+    background-color: transparent;
+    border: 1px solid #afafafb7;
+}
+
+.reg{
+    font-family: 'Public Sans';
+    font-weight: 400;
+    font-size: 11px;
+    color: #000000;
+}
+
+/* Стили для блока вводного контента */
+.intro {
+    background-image: url(../img/content_img/intro.jpg); /* Фоновое изображение */
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#intro_id{
+    visibility: hidden;
+    opacity: 0;
+    z-index: -5;
+}
+
+/* Стили для содержимого блока вводного контента */
+.intro_content {
+    padding-top: 164px;
+}
+
+/* Стили для блока текста */
+.text_box {
+    color: #FFFFFF;
+}
+
+/* Стили для заголовка вводного блока */
+.intro_title {
+    max-width: 535px;
+    margin-bottom: 0;
+    font-size: 38px;
+    line-height: 44px;
+}
+
+/* Стили для абзаца вводного блока */
+.p_intro {
+    max-width: 542px;
+    margin-top: 29px;
+    font-size: 18px;
+    line-height: 28px; 
+}
+
+/* Стили для кнопки вводного блока */
+.intro_button {
+    margin-top: 11px;
+    padding: 17px 33px;
+    color: #FFFFFF;
+    background-color: transparent;
+    border: 1px solid #ffffff30;
+    border-radius: 80px;
+    cursor: pointer;
+}
+
+/* Стили для списка вводного блока */
+.intro_list_box {
+    margin-top: 115px;
+    padding-bottom: 40px;
+}
+
+/* Стили для элементов списка вводного блока */
+.intro_list {
+    display: grid;
+    grid-template-columns: repeat(6, 160px);
+    column-gap: 32px; /* Горизонтальный отступ между колонками */
+    padding: 0;
+}
+
+/* Стили для текста элементов списка вводного блока */
+.intro_list_box,
+.intro_link {
+    font-family: 'Public Sans';
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+
+/* Стили для ссылок вводного блока */
+.intro_link,
+.intro_item {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 41px;
+    border-top: 1px solid;
+}
+
+/* Стили для блока описания */
+.desc{
+    background-color: transparent;
+}
+
+/* Стили для содержимого блока описания */
+.desc_content{
+    margin-top: 105px;
+}
+
+/* Стили для заголовка блока описания */
+.desc_title{
+    max-width: 717px;
+    color: #003331;
+    margin-bottom: 0;
+    font-size: 30px;
+    line-height: 38px;
+    text-align: center;
+}
+
+/* Стили для блока шагов */
+.steps_box{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 57px;
+    font-family: 'Public Sans';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+/* Стили для линии между шагами */
+.line{
+    align-items: center;
+    width: 176px;
+    height: 1px;
+    background-color: #35536233;
+}
+
+/* Стили для блока шагов */
+.steps{
+    display: grid;
+    justify-items: center;
+}
+
+/* Стили для круглых маркеров шагов */
+.circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    color: #FFFFFF;
+    background-color: #014C48;
+    border-radius: 100%;
+}
+
+/* Общие стили для текста шагов */
+.p_step{
+    text-align: center;
+}
+
+/* Стили для текста шага 1 */
+.p_step_1{
+    max-width: 132px;
+}
+
+/* Стили для текста шага 2 */
+.p_step_2{
+    max-width: 130px;
+}
+
+/* Стили для текста шага 3 */
+.p_step_3{
+    max-width: 126px;
+}
+
+/* Стили для блока с информацией о человеке */
+.human {
+    background-color: #F7F8F8;
+}
+
+/* Стили для раздела с контентом о человеке */
+.human_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 172px 0 80px 0;
+}
+
+/* Стили для заголовка контента о человеке */
+.human_title {
+    margin-bottom: 0;
+    color: #003331;
+    font-size: 21px;
+    line-height: 34px;
+}
+
+/* Стили для абзацев связанного с человеком контента */
+.p_human {
+    margin: 13px 0 0 0;
+    max-width: 449px;
+    color: #355362CC;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+/* Стили для кнопок связанных с контентом о человеке */
+.human_button {
+    margin-top: 37px;
+    padding: 17px 33px; 
+    border-radius: 80px;
+    border: 1px solid #35536233;
+    background-color: transparent;
+    color: #00413E;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+}
+
+/* Стили для изображений связанных с человеком контентом */
+.human_img_box img {
+    width: 100%;
+    height: auto;
+}
+
+/* Стили для блока с изображениями связанным с контентом о человеке */
+.human_img_box {
+    display: grid;
+    grid-template-columns: 235px 317px;
+    gap: 8px;
+}
+
+/* Стилизации раздела прессы */
+
+.press {
+    background-color: transparent;
+}
+
+/* Стили для списка элементов прессы */
+.press_list {
+    display: grid;
+    grid-template-columns: repeat(6,165px);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+/* Стили для ссылки на элемент прессы */
+.press_link {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding-top: 16px;
+    width: 165px;
+    height: 41px;
+    border: none;
+    border-top: 1px solid #3553624D;
+    cursor: pointer;
+    color: #355362CC;
+    font-family: 'Public Sans';
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+
+/* Стили для изображения в элементе прессы */
+.press_img {
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+}
+
+/* Стили для изображения TED */
+.ted_img {
+    background-image: url(../img/press_img/ted.jpg);
+}
+
+/* Стили для изображения NYT */
+.nyt_img {
+    background-image: url(../img/press_img/nyt.jpg);
+}
+
+/* Стили для изображения Scoop */
+.scoop_img {
+    background-image: url(../img/press_img/scoop.jpg);
+}
+
+/* Стили для изображения Associated Press */
+.associated_img {
+    background-image: url(../img/press_img/associated.jpg);
+}
+
+/* Стили для изображения Time */
+.time_img {
+    background-image: url(../img/press_img/time.jpg);
+}
+
+/* Стили для изображения FreeThink */
+.freethink_img {
+    background-image: url(../img/press_img/freethink.jpg);
+}
+
+/* Стили для блока с классом "forest" */
+.forest {
+    position: relative;
+    background-color: #001414;
+}
+
+/* Стили для фонового изображения "forest_bg" */
+.forest_bg {
+    position: absolute;
+    background-image: url(../img/content_img/forest_bg.png);
+    width: 287px;
+    height: 680px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* Стили для левого фонового изображения */
+.bg_left {
+    background-image: url(../img/content_img/forest_bg.png);
+}
+
+/* Стили для блока с содержимым внутри блока "forest" */
+.forest_content {
+    position: relative;
+    z-index: 3;
+    background-color: #001414;
+}
+
+/* Стили для блока текстового блока "forest_text_box" */
+.forest_text_box {
+    padding: 260px 106px;
+    color: #FFFFFF;
+}
+
+/* Стили для заголовка "forest_title" */
+.forest_title {
+    font-size: 22px;
+    line-height: 22px;
+    text-align: left;
+}
+
+/* Стили для абзаца "p_forest" */
+.p_forest {
+    max-width: 542px;
+    font-size: 15px;
+    line-height: 24px;
+    text-align: left;
+}
+
+/* Стили для правого фонового изображения */
+.bg_right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: url(../img/content_img/forest_bg2.png);
+}
+
+/* Стили для контейнера с классом "partners_content" */
+.partners_content {
+    margin-top: 16px;
+}
+
+/* Стили для изображений в элементах партнеров */
+.partners_item img {
+    width: 100%;
+    height: auto;
+}
+
+/* Стили для контейнера списка партнеров */
+.partners_list_box {
+    display: grid;
+    grid-template-columns: 67px 1fr 65px;
+    align-items: center;
+}
+
+/* Стили для абзаца в блоке "partners" */
+.p_partners {
+    font-size: 11px;
+    color: #35536299;
+}
+
+/* Стили для списка партнеров */
+.partners_list {
+    display: grid;
+    grid-template-columns: repeat(6, 160px);
+    justify-content: space-between;
+    padding: 0;
+}
+
+/* Стили для ссылок на партнеров */
+.link_partners {
+    padding: 10px 10px;
+    font-size: 11px;
+    color: #35536299;
+}
+
+/* Стили для блока с классом "info" */
+.info {
+    background-color: #F4F5F5;
+    margin-top: 41px;
+}
+
+/* Стили для фонового изображения "info_bg" */
+.info_bg {
+    background-image: url(../img/content_img/information.png);
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Стили для блока с текстовым контентом "info_text_box" */
+.info_text_box {
+    display: grid;
+    grid-template-columns: 424px 560px;
+    justify-content: space-between;
+}
+
+/* Стили для заголовка "info_title" */
+.info_title {
+    margin-top: 0;
+    font-size: 31px;
+    line-height: 38px;
+    letter-spacing: 1.2px;
+}
+
+/* Стили для блока параграфов "p_box" */
+.p_box {
+    display: grid;
+    grid-template-columns: 248px 263px;
+    column-gap: 50px;
+}
+
+/* Стили для заголовка параграфа "p_box_title" */
+.p_box_title {
+    margin: 0;
+    font-family: 'Public Sans';
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+
+/* Стили для параграфа "p_box_p" */
+.p_box_p {
+    margin: 0 0 37px;
+    font-size: 15px;
+    line-height: 24px;
+    color: #355362CC;
+}
+
+/* Секция "recidiviz" */
+.recidiviz{
+    background-color: transparent;
+}
+
+/* Блок заголовка и кнопки */
+.recidiviz_title_button_box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Заголовок */
+.recidiviz_title{
+    color: #003331;
+    font-size: 27px;
+    line-height: 38px;
+}
+
+/* recidiviz_button */
+.recidiviz_button{
+    padding: 17px 33px;
+    border: 1px solid #35536233;
+    border-radius: 80px;
+    background-color: transparent;
+}
+
+/* Список */
+.recidiviz_list{
+    display: grid;
+    grid-template-columns: repeat(3, 365px);
+    justify-content: space-between;
+    row-gap: 105px;
+    padding: 0;
+}
+
+/* Обертка списка */
+.recidiviz_item{
+    max-width: 363px;
+    height: auto;
+    border-top: 1px solid #3553624D;
+    cursor: pointer;
+}
+
+/* Блок с текстом */
+.recidiviz_text_box{
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+    margin-top: 16px;
+}
+
+/* Изминения при навидении */
+.recidiviz_item:hover > .recidiviz_link{
+    color: #00A1FF;
+}
+
+/* Изминения при нажатии */
+.recidiviz_item:active > .recidiviz_link{
+    color: #E00E00;
+}
+
+/* Иконка */
+.recidiviz_icon{
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+/* Заголовок */
+.recidiviz_list_title{
+    text-transform: uppercase;
+    color: #35536299;
+    font-family: 'Public Sans';
+    font-size: 11px;
+    line-height: 16px;
+}
+
+/* Ссылка */
+.recidiviz_link{
+    color: #00413E;
+    font-size: 17px;
+    line-height: 25px;
+}
+
+/* Иконки каждого блока */
+.ted{
+    background-image: url(../img/press_img/ted.jpg);
+}
+
+.correctional{
+    background-image: url(../img/recediviz_img/correctional.jpg);
+}
+
+.department{
+    background-image: url(../img/recediviz_img/department.jpg);
+}
+
+.nyt{
+    background-image: url(../img/press_img/nyt.jpg);
+}
+
+.corrections1{
+    background-image: url(../img/recediviz_img/corrections1.jpg)
+}
+
+.right{
+    background-image: url(../img/recediviz_img/right.jpg);
+}
+
+/* Секция "usa" */
+.usa{
+    background-color: #001F1F;
+}
+
+/* Обертка для содержимого секции "usa" */
+.usa_content{
+    display: flex;
+    justify-content: space-between;
+    padding: 155px 0 133px 0;
+}
+
+.usa_title{
+    margin-bottom: 0;
+    color: #FAFAFA;
+    font-size: 36px;
+    line-height: 52px;
+    letter-spacing: 1.2px;
+}
+
+.p_usa{
+    max-width: 326px;
+    margin: 43 0 0 0;
+    color: #FAFAFA;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.usa_button{
+    margin-top: 37px;
+    padding: 16px 32px;
+    background-color: #00665F;
+    border-radius: 80px;
+    border: none;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/* Картинка карты */
+.map_img{
+    background-image: url(../img/content_img/usa_map.png);
+    width: 451px;
+    height: 342px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Секция "link" */
+.link{
+    background-color: #001414;
+}
+
+/* Обертка для содержимого секции "link" */
+.link_content{
+    position: relative;
+    padding: 122px 0;
+}
+
+/* Блок с ссылками */
+.link_box{
+    display: flex;
+    column-gap: 133px;
+}
+
+/* Блок ссылок таких в это секции 4 */
+.network{
+    position: absolute;
+    right: 0;
+}
+
+.link_title{
+    color: #7D9798;
+    text-transform: uppercase;
+    font-family: 'Public Sans';
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.link_line{
+    display: block;
+    width: 16px;
+    height: 1px;
+    background-color: #25B895;
+}
+
+/* Список */
+.link_list{
+    padding: 0;
+    font-family: 'Public Sans';
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+}
+
+.li_link{
+    color: #EDECEB;
+}
+
+/* footer */
+.footer{
+    padding: 40px 0 72px 0;
+    background-color: #000F0F;
+}
+
+/* Обертка для содержимого секции "footer" */
+.footer_content{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Блок с контентом футер */
+.footer_content_box{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.footer_link_box{
+    display: flex;
+    column-gap: 8px;
+}
+
+.footer_link_box a,
+.p_footer_box p{
+    color: #E5ECEC;
+    font-size: 10px;
+    line-height: 10px;
+    text-align: left;
+}
+
+.p_footer_box{
+    display: flex;
+    text-align: end;
+}

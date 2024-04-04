@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recidiviz</title>
+    <!-- Подключение таблиц стилей -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <link rel="icon" href="./img/content_img/logo_icon.svg">
+    <!-- Предварительное подключение внешних шрифтов -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Верхняя часть страницы (шапка) -->
+    <header id="header" class="header">
+        <div class="container">
+            <div class="header_content">
+                <!-- Навигационное меню -->
+                <nav class="navbar">
+                    <!-- Логотип сайта -->
+                    <a href="#id_intro" class="logo_link">
+                        <img src="./img/content_img/logo_header.svg" alt="Logo" class="logo_img">
+                    </a>
+                    <!-- Гамбургер-меню для мобильных устройств -->
+                    <input class="input_burger" type="checkbox" name="burger" id="burger">
+                    <div class="menu">
+                        <!-- Список элементов навигации -->
+                        <ul class="list_menu">
+                            <li class="list_item">
+                                <a href="#id_intro" class="link_item">States</a>
+                            </li>
+                            <li class="list_item">
+                                <a href="#id_desc" class="link_item">Tools</a>
+                            </li>
+                            <li class="list_item">
+                                <a href="#id_human" class="link_item">People</a>
+                            </li>
+                            <li class="list_item">
+                                <a href="#id_link" class="link_item">Learn More</a>
+                            </li>
+                            <li class="list_item">
+                                <a href="#" class="link_item">Donate</a>
+                            </li>
+                            <li class="list_item">
+                                <a href="#popup" class="link_item">Log In</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Иконка для гамбургер-меню -->
+                    <label for="burger" class="burger_menu">
+                        <div class="burger_line_box">
+                            <span class="line_burger line_1"></span>
+                            <span class="line_burger line_2"></span>
+                            <span class="line_burger line_3"></span>
+                            <span class="line_burger line_4"></span>
+                        </div>
+                    </label>
+                </nav>
+            </div>
+        </div>
+        <!-- Popup -->
+        <div id="popup" class="popup">
+            <!-- Арена для закрытия из фона -->
+            <a href="#header" class="popup_area"></a>
+            <!-- Тело -->
+            <div class="popup_body">
+                <!-- Контент -->
+                <div class="popup_content">
+                    <!-- Заголовок -->
+                    <h2 class="log_in">
+                        Log in
+                    </h2>
+                    <!-- Крестик для закрытия -->
+                    <a href="#header" class="popup_close">
+                        <span class="close_line"></span>
+                        <span class="close_line_2"></span>
+                    </a>
+                    <!-- Форма для входа -->
+                    <form action="#" class="form">
+                        <div class="form_group">
+                            <input type="text" id="name" name="name" placeholder=" " required class="form_input">
+                            <label for="name" class="form_label">User name</label>
+                        </div>
+                        <div class="form_group form_group_last_child">
+                            <input type="password" id="password" name="password" placeholder=" " required class="form_input">
+                            <label for="password" class="form_label">Password</label>
+                        </div>
+                        <div class="form_button_box">
+                            <button class="form_button">
+                                Log in
+                            </button>
+                        </div>
+                        <a href="#" class="reg">
+                            Authorization
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main_content">
+       <!-- Введение -->
+        <section class="intro">
+            <!-- Якорь -->
+            <div class="anchor" id="id_intro">!</div>
+            <!-- Блок для центрирования и ограничения ширины содержимого -->
+            <div class="container">
+                <!-- Обертка для контента введения -->
+                <div class="intro_content">
+                    <!-- Блок для текстового содержимого -->
+                    <div class="text_box">
+                        <!-- Заголовок введения -->
+                        <h1 class="intro_title">
+                            Every person who safely transitions back to the 
+                            community is a step toward a better society.
+                        </h1>
+                        <!-- Параграф введения -->
+                        <p class="p_intro">
+                            Criminal justice leaders use Recidiviz to get a 
+                            real-time picture of their system, diagnose 
+                            issues, and drive meaningful changes.
+                        </p>
+                        <!-- Кнопка для действия -->
+                        <button type="button" class="intro_button">
+                            See our work in action
+                        </button>
+                    </div>
+                </div>
+                <!-- Блок для списка -->
+                <div class="intro_list_box">
+                    <!-- Заголовок списка -->
+                    <h4 class="intro_list_title">
+                        Trusted in:
+                    </h4>
+                    <!-- Список ссылок -->
+                    <ul class="intro_list">
+                        <!-- Элемент списка -->
+                        <li class="intro_item">
+                            <!-- Ссылка -->
+                            <a href="#" class="intro_link">Idaho</a>
+                        </li>
+                        <li class="intro_item">
+                            <a href="#" class="intro_link">Mine</a>
+                        </li>
+                        <li class="intro_item">
+                            <a href="#" class="intro_link">Missouri</a>
+                        </li>
+                        <li class="intro_item">
+                            <a href="#" class="intro_link">North Dakota</a>
+                        </li>
+                        <li class="intro_item">
+                            <a href="#" class="intro_link">Pennsylvania</a>
+                        </li>
+                        <li class="intro_item">
+                            <a href="#" class="intro_link">Tennessee</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Секция с описанием -->
+        <section class="desc">
+            <!-- Якорь -->
+            <div class="anchor" id="id_desc">!</div>
+            <div class="custom_container">
+                <!-- Обертка для содержимого описания -->
+                <div class="desc_content">
+                    <h2 class="desc_title">
+                        We are a non-profit that partners with state criminal 
+                        justice agencies to advance their 
+                        use of data and reduce incarceration.
+                    </h2>
+                    <!-- Блок для шагов -->
+                    <div class="steps_box">
+                        <!-- Первый шаг -->
+                        <div class="steps">
+                            <div class="circle">1</div>
+                            <p class="p_step p_step_1">intake an agency’s disjointed data</p>
+                        </div>
+                        <!-- Линия-разделитель -->
+                        <div class="line"></div>
+                        <!-- Второй шаг -->
+                        <div class="steps">
+                            <div class="circle">2</div>
+                            <p class="p_step p_step_2">deploy tools for all levels of decision making</p>
+                        </div>
+                         <!-- Линия-разделитель -->
+                        <div class="line"></div>
+                        <!-- Третий шаг -->
+                        <div class="steps">
+                            <div class="circle">3</div>
+                            <p class="p_step p_step_3">improve outcomes for justice-impacted individuals</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Секция "human"-->
+        <section class="human">
+            <!-- Якорь -->
+            <div class="anchor" id="id_human">!</div>
+            <!-- Контейнер для ограничения ширины содержимого -->
+            <div class="container">
+                <!-- Обертка для содержимого о человеке -->
+                <div class="human_content">
+                    <!-- Блок с текстовым содержимым о человеке -->
+                    <div class="human_text_box">
+                        <!-- Заголовок о человеке -->
+                        <h2 class="human_title">
+                            A human–centered definition of success.
+                        </h2>
+                        <!-- Параграф о человеке -->
+                        <p class="p_human">
+                            Our approach is shaped by the perspective and 
+                            experience of people impacted by the justice system. 
+                            Together, we are focused on restoring equity and 
+                            supporting success in the community.
+                        </p>
+                        <!-- Кнопка для действия -->
+                        <button type="button" class="human_button">
+                            Our approach
+                        </button>
+                    </div>
+                    <!-- Блок с изображениями человека -->
+                    <div class="human_img_box">
+                        <!-- Изображение 1 -->
+                        <img class="human_img" src="./img/content_img/human.jpg" alt="Human">
+                        <!-- Изображение 2 -->
+                        <img class="human_img" src="./img/content_img/human2.jpg" alt="Human">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Секция "press" -->
+        <section class="press">
+            <!-- Контейнер для ограничения ширины содержимого -->
+            <div class="container">
+                <!-- Обертка для содержимого секции "Пресса" -->
+                <div class="press_content">
+                    <!-- Блок со списком ссылок на публикации -->
+                    <div class="press_list_box">
+                        <!-- Список ссылок -->
+                        <ul class="press_list">
+                            <!-- Элемент списка -->
+                            <li class="press_item">
+                                <!-- Ссылка 1 -->
+                                <a href="#" class="press_link">
+                                    <!-- Иконка/изображение -->
+                                    <span class="press_img ted_img"></span>
+                                    <!-- Текст ссылки -->
+                                    <span class="link_text">TED Talks</span>
+                                </a>
+                            </li>
+                            <!-- Элемент списка -->
+                            <li class="press_item">
+                                <!-- Ссылка 2 -->
+                                <a href="#" class="press_link">
+                                    <!-- Иконка/изображение -->
+                                    <span class="press_img nyt_img"></span>
+                                    <!-- Текст ссылки -->
+                                    <span class="link_text">The New York Times</span>
+                                </a>
+                            </li>
+                            <!-- Элемент списка -->
+                            <li class="press_item">
+                                <!-- Ссылка 3 -->
+                                <a href="#" class="press_link">
+                                    <!-- Иконка/изображение -->
+                                    <span class="press_img scoop_img"></span>
+                                    <!-- Текст ссылки -->
+                                    <span class="link_text">StateScoop</span>
+                                </a>
+                            </li>
+                            <!-- Элемент списка -->
+                            <li class="press_item">
+                                <!-- Ссылка 4 -->
+                                <a href="#" class="press_link">
+                                    <!-- Иконка/изображение -->
+                                    <span class="press_img associated_img"></span>
+                                    <!-- Текст ссылки -->
+                                    <span class="link_text">Associated Press</span>
+                                </a>
+                            </li>
+                            <!-- Элемент списка -->
+                            <li class="press_item">
+                                <!-- Ссылка 5 -->
+                                <a href="#" class="press_link">
+                                    <!-- Иконка/изображение -->
+                                    <span class="press_img time_img"></span>
+                                    <!-- Текст ссылки -->
+                                    <span class="link_text">Time</span>
+                                </a>
+                            </li>
+                            <!-- Элемент списка -->
+                            <li class="press_item">
+                                <!-- Ссылка 6 -->
+                                <a href="#" class="press_link">
+                                    <!-- Иконка/изображение -->
+                                    <span class="press_img freethink_img"></span>
+                                    <!-- Текст ссылки -->
+                                    <span class="link_text">Freethink</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Секция "forest" -->
+        <section class="forest">
+            <!-- Фоновое изображение слева -->
+            <div class="forest_bg bg_left"></div>
+            <!-- Контейнер для ограничения ширины содержимого -->
+            <div class="custom_container">
+                <!-- Обертка для содержимого секции "Лес" -->
+                <div class="forest_content">
+                    <!-- Блок с текстовым содержимым о лесе -->
+                    <div class="forest_text_box">
+                        <!-- Заголовок о лесе -->
+                        <h2 class="forest_title">
+                            See the forest and the trees.
+                        </h2>
+                        <!-- Параграф о лесе -->
+                        <p class="p_forest">
+                            The criminal justice system can't support safe, 
+                            whole communities without feedback on what’s working and what’s not. 
+                            We stitch together data from fragmented systems to provide decision-makers 
+                            with the information they need to improve outcomes. With this data, 
+                            we surface opportunities to safely chart a path to a smaller system, 
+                            and to track the impact of policy and practice changes over time.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Фоновое изображение справа -->
+            <div class="forest_bg bg_right"></div>
+        </section>
+       <!-- Секция "partners" -->
+        <section class="partners">
+            <!-- Контейнер для ограничения ширины содержимого -->
+            <div class="container">
+                <!-- Обертка для содержимого секции "partners" -->
+                <div class="partners_content">
+                    <!-- Блок с списком партнеров -->
+                    <div class="partners_list_box">
+                        <!-- Заголовок секции "Партнеры" -->
+                        <p class="p_partners">PARTNERS</p>
+                        <!-- Список партнеров -->
+                        <ul class="partners_list">
+                            <!-- Партнер 1 -->
+                            <li class="partners_item">
+                                <a href="#">
+                                    <!-- Изображение партнера 1 -->
+                                    <img src="./img/partners_img/refdrm.jpg" alt="Refdrm">
+                                </a>
+                            </li>
+                            <!-- Партнер 2 -->
+                            <li class="partners_item">
+                                <a href="#">
+                                    <!-- Изображение партнера 2 -->
+                                    <img src="./img/partners_img/schmidt.jpg" alt="Schmidt">
+                                </a>
+                            </li>
+                            <!-- Партнер 3 -->
+                            <li class="partners_item">
+                                <a href="3">
+                                    <!-- Изображение партнера 3 -->
+                                    <img src="./img/partners_img/right.jpg" alt="Right">
+                                </a>
+                            </li>
+                            <!-- Партнер 4 -->
+                            <li class="partners_item">
+                                <a href="#">
+                                    <!-- Изображение партнера 4 -->
+                                    <img src="./img/partners_img/moz.jpg" alt="Mozz">
+                                </a>
+                            </li>
+                            <!-- Партнер 5 -->
+                            <li class="partners_item">
+                                <a href="#">
+                                    <!-- Изображение партнера 5 -->
+                                    <img src="./img/partners_img/aclu.jpg" alt="Aclu">
+                                </a>
+                            </li>
+                            <!-- Партнер 6 -->
+                            <li class="partners_item">
+                                <a href="#">
+                                    <!-- Изображение партнера 6 -->
+                                    <img src="./img/partners_img/y.jpg" alt="Y">
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- Ссылка для просмотра всех партнеров -->
+                        <a href="#" class="link_partners">SEE ALL</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Секция "info" -->
+        <section class="info">
+            <!-- Наложение фонового оверлея -->
+            <div class="info_bg"></div>
+            <div class="container">
+                <div class="info_content">
+                    <div class="info_text_box">
+                        <!-- Основной заголовок -->
+                        <h2 class="info_title">
+                            Get the right information to 
+                            the right person at the right time.
+                        </h2>
+                        <div class="p_box">
+                            <!-- Секция для Лидеров -->
+                            <div class="leaders">
+                                <!-- Подзаголовок для Лидеров -->
+                                <h4 class="p_box_title leader_title">
+                                    For Leaders
+                                </h4>
+                                <!-- Описание для Лидеров -->
+                                <p class="p_box_p p_leaders">
+                                    Set goals, forecast the impact of policy or 
+                                    practice changes, and track their 
+                                    outcomes across your agency.
+                                </p>
+                            </div>
+                            <!-- Секция для Линейного персонала -->
+                            <div class="staff">
+                                <!-- Подзаголовок для Линейного персонала -->
+                                <h4 class="p_box_title staff_title">
+                                    For Line Staff
+                                </h4>
+                                <!-- Описание для Линейного персонала -->
+                                <p class="p_box_p p_staff">
+                                    Track probation and parole outcomes, 
+                                    see what’s leading to success, and reduce 
+                                    recidivism with our case management system.
+                                </p>
+                            </div>
+                            <!-- Секция для Общественности -->
+                            <div class="public">
+                                <!-- Подзаголовок для Общественности -->
+                                <h4 class="p_box_title public_title">
+                                    For the Public
+                                </h4>
+                                <!-- Описание для Общественности -->
+                                <p class="p_box_p p_public">
+                                    Use open source code, public data, interactive tools, 
+                                    and data visualizations to understand the 
+                                    state of incarceration, promote accountability,
+                                    and conduct research.
+                                </p>
+                            </div>
+                            <!-- Секция для Политиков и Активистов -->
+                            <div class="advocates">
+                                <!-- Подзаголовок для Политиков и Активистов -->
+                                <h4 class="p_box_title advocates_title">
+                                    For Policymakers and Advocates
+                                </h4>
+                                <!-- Описание для Политиков и Активистов -->
+                                <p class="p_box_p p_advocates">
+                                    Project the impact of policies on carceral, 
+                                    fiscal, and community outcomes. Understand where 
+                                    disparities begin, where they grow, and whether a 
+                                    policy is likely to increase or reduce them.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Секция "recidiviz" -->
+        <section class="recidiviz">
+            <div class="container">
+                <!-- Обертка для содержимого секции "recidiviz" -->
+                <div class="recidiviz_content">
+                    <!-- Блок заголовка и кнопки -->
+                    <div class="recidiviz_title_button_box">
+                        <h2 class="recidiviz_title">
+                            Recidiviz in the Press
+                        </h2>
+                        <button class="recidiviz_button">
+                            See All
+                        </button>
+                    </div>
+                    <!-- Блок список recidiviz -->
+                    <div class="recidiviz_list_box">
+                        <!-- Список -->
+                        <ul class="recidiviz_list">
+                            <!-- Обертка списка -->
+                            <li class="recidiviz_item">
+                                <!-- Блок с текстом-->
+                                <div class="recidiviz_text_box">
+                                    <!-- Иконка-->
+                                    <span class="recidiviz_icon ted"></span>
+                                    <!-- Заголовок -->
+                                    <h4 class="recidiviz_list_title">TED Talks</h4>
+                                    <!-- Время поста -->
+                                    <time datetime="2.22.22" class="time">2.22.22</time>
+                                </div>
+                                <a href="#" class="recidiviz_link">Meet the 2022 class of TED Fellows</a>
+                            </li>
+                            <!-- Ниже всё тоже самое -->
+                            <li class="recidiviz_item">
+                                <div class="recidiviz_text_box">
+                                    <span class="recidiviz_icon correctional"></span>
+                                    <h4 class="recidiviz_list_title">Correctional News</h4>
+                                    <time datetime="2.22.22" class="time">2.22.22</time>
+                                </div>
+                                <a href="#" class="recidiviz_link">New Partnership Aims to Help Transform Prison Conditions</a>
+                            </li>
+                            <li class="recidiviz_item">
+                                <div class="recidiviz_text_box">
+                                    <span class="recidiviz_icon department"></span>
+                                    <h4 class="recidiviz_list_title">Department of Justice</h4>
+                                    <time datetime="1.26.22" class="time">1.26.22</time>
+                                </div>
+                                <a href="#" class="recidiviz_link">Justice Department Establishes Initiative to Strengthen States’ Use of Criminal Justice Data</a>
+                            </li>
+                            <li class="recidiviz_item">
+                                <div class="recidiviz_text_box">
+                                    <span class="recidiviz_icon nyt"></span>
+                                    <h4 class="recidiviz_list_title">The New York Times</h4>
+                                    <time datetime="12.27.21" class="time">12.27.21</time>
+                                </div>
+                                <a href="#" class="recidiviz_link">The 2021 Good Tech Awards</a>
+                            </li>
+                            <li class="recidiviz_item">
+                                <div class="recidiviz_text_box">
+                                    <span class="recidiviz_icon corrections1"></span>
+                                    <h4 class="recidiviz_list_title">Corrections1</h4>
+                                    <time datetime="11.18.21" class="time">11.18.21</time>
+                                </div>
+                                <a href="#" class="recidiviz_link">Maine DOC to better harness correctional data to improve outcomes</a>
+                            </li>
+                            <li class="recidiviz_item">
+                                <div class="recidiviz_text_box">
+                                    <span class="recidiviz_icon right"></span>
+                                    <h4 class="recidiviz_list_title">Right on Crime</h4>
+                                    <time datetime="9.9.21" class="time">9.9.21</time>
+                                </div>
+                                <a href="#" class="recidiviz_link">Together, We Can Make Mississippi Safer and Reentry-Ready</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Секция "usa" -->
+        <section class="usa">
+            <div class="container">
+                <!-- Обертка для содержимого секции "usa" -->
+                <div class="usa_content">
+                    <!-- Блок с текстом и кнопкой-->
+                    <div class="usa_text_box">
+                        <h2 class="usa_title">
+                            Where we work
+                        </h2>
+                        <p class="p_usa">
+                            We're expanding. Get in touch and start 
+                            turning your data into action.
+                        </p>
+                        <!-- Кнопка -->
+                        <button type="button" class="usa_button">
+                            Get in touch
+                        </button>
+                    </div>
+                    <!-- Картинка карты -->
+                    <div class="map_img"></div>
+                </div>
+            </div>
+        </section>
+        <!-- Секция "link" -->
+        <section class="link">
+            <!-- Якорь -->
+            <div class="anchor" id="id_link">!</div>
+            <div class="container">
+                <!-- Обертка для содержимого секции "link" -->
+                <div class="link_content">
+                    <!-- Блок с ссылками -->
+                    <div class="link_box">
+                        <div class="company">
+                            <!-- Заголовок -->
+                            <h5 class="link_title company_title">
+                                Company
+                            </h5>
+                            <!-- Линия-разделитель -->
+                            <span class="link_line"></span>
+                            <!-- Список -->
+                            <ul class="link_list">
+                                <li class="li_item">
+                                    <a href="#" class="li_link">
+                                        About
+                                    </a>
+                                </li>
+                                <li class="li_item">
+                                    <a href="#" class="li_link">
+                                        Team
+                                    </a>
+                                </li>
+                                <li class="li_item">
+                                    <a href="#" class="li_link">
+                                        Supporters
+                                    </a>
+                                </li>
+                                <li class="li_item">
+                                    <a href="#" class="li_link">
+                                        Diversity
+                                    </a>
+                                </li>
+                                <li class="li_item">
+                                    <a href="#" class="li_link">
+                                        Blog
+                                    </a>
+                                </li>
+                                <li class="li_item">
+                                    <a href="#" class="li_link">
+                                        Press
+                                    </a>
+                                </li>
+                                <li class="li_item">
+                                    <a href="#" class="li_link">
+                                        Careers
+                                    </a>
+                                </li>
+                                <li class="li_item">
+                                    <a href="#" class="li_link">
+                                        Contact
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Ниже всё тоже мамое -->
+                        <div class="product">
+                            <h5 class="link_title product_title">
+                                Product
+                            </h5>
+                            <span class="link_line"></span>
+                            <ul class="link_list">
+                                <li class="li_item">
+                                    <a href="#" class="li_link">
+                                        Our Approach
+                                    </a>
+                                </li>
+                                <li class="li_item">
+                                    <a href="#" class="li_link">
+                                        Corrections Leaders
+                                    </a>
+                                </li>
+                                <li class="li_item">
+                                    <a href="#" class="li_link">
+                                        Corrections Staff
+                                    </a>
+                                </li>
+                                <li class="li_item">
+                                    <a href="#" class="li_link">
+                                        Policy Impact
+                                    </a>
+                                </li>
+                                <li class="li_item">
+                                    <a href="#" class="li_link">
+                                        Public Data
+                                    </a>
+                                </li>
+                                <li class="li_item">
+                                    <a href="#" class="li_link">
+                                        Security
+                                    </a>
+                                </li>
+                                <li class="li_item">
+                                    <a href="#" class="li_link">
+                                        Testimonials
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="states">
+                            <h5 class="link_title states_title">
+                                States
+                            </h5>
+                            <span class="link_line"></span>
+                            <ul class="link_list">
+                                <li class="li_item">
+                                    <a href="#" class="li_link">
+                                        Overview
+                                    </a>
+                                </li>
+                                <li class="li_item">
+                                    <a href="#" class="li_link">
+                                        Idaho
+                                    </a>
+                                </li>
+                                <li class="li_item">
+                                    <a href="#" class="li_link">
+                                        Maine
+                                    </a>
+                                </li>
+                                <li class="li_item">
+                                    <a href="#" class="li_link">
+                                        Michigan
+                                    </a>
+                                </li>
+                                <li class="li_item">
+                                    <a href="#" class="li_link">
+                                        Missouri
+                                    </a>
+                                </li>
+                                <li class="li_item">
+                                    <a href="#" class="li_link">
+                                        North Dakota
+                                    </a>
+                                </li>
+                                <li class="li_item">
+                                    <a href="#" class="li_link">
+                                        Pennsylvania
+                                    </a>
+                                </li>
+                                <li class="li_item">
+                                    <a href="#" class="li_link">
+                                        Tennessee
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="network">
+                            <h5 class="link_title network_title">
+                                Network
+                            </h5>
+                            <span class="link_line"></span>
+                            <ul class="link_list">
+                                <li class="li_item">
+                                    <a href="#" class="li_link">
+                                        Twitter
+                                    </a>
+                                </li>
+                                <li class="li_item">
+                                    <a href="#" class="li_link">
+                                        Medium
+                                    </a>
+                                </li>
+                                <li class="li_item">
+                                    <a href="#" class="li_link">
+                                        GitHub
+                                    </a>
+                                </li>
+                                <li class="li_item">
+                                    <a href="#" class="li_link">
+                                        LinkedIn
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <!-- Обертка для содержимого секции "footer" -->
+            <div class="footer_content">
+                <!-- Иконка -->
+                <img src="./img/content_img/logo_icon.svg" alt="logo" class="logo">
+                <!-- Блок с контентом футер -->
+                <div class="footer_content_box">
+                    <div class="footer_link_box">
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Privacy</a>
+                        <a href="#">Responsible Disclosure</a>
+                    </div>
+                    <div class="p_footer_box">
+                        <p>Copyright © 2017</p>
+                        <p>-2022, Recidiviz. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
